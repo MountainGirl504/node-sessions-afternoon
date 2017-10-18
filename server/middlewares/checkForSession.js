@@ -1,7 +1,7 @@
 module.exports = function (req, res, next) {
-
-    if (!req.session.user){
-        req.session.user = {username: '', cart:[], total:0}
+    const {session} = req;
+    if (!session.user){
+        session.user = {username: '', cart:[], total:0}
     }
     next();
 }

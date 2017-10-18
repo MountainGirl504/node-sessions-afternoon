@@ -15,7 +15,7 @@ app.use(session({
     saveUninitialized: false 
 }));
 
-app.use( checkForSession );
+app.use( checkForSession ); //checks if there's a middleware
 app.use( express.static( `${__dirname}/../public/build` ) ); //cuz we are running server and client on the same server
 
 app.get( '/api/swag', swag_controller.read);        //WHAT DOES THIS DO???
